@@ -1,5 +1,8 @@
-#include "common.h"
-#include "insertion_sort.hpp"
+#ifndef CHARPTER1_MERGE_SORT_HPP_H
+#define CHARPTER1_MERGE_SORT_HPP_H
+
+#include "common/common.h"
+#include "Chapter1/insertion_sort.hpp"
 
 template<typename Iterator>
 void Merge(Iterator begin, Iterator mid, Iterator end) {
@@ -9,7 +12,7 @@ void Merge(Iterator begin, Iterator mid, Iterator end) {
         l.push_back(*it);
     }
     for (auto it = mid; it != end; ++it) {
-        r.push_back(it);
+        r.push_back(*it);
     }
     auto less_than = [&l, &r](Iterator l_iter, Iterator r_iter) {
         if (l_iter == l.end()) {
@@ -40,8 +43,8 @@ void MergeSortImp(Iterator begin, Iterator end) {
         return;
     }
     Iterator mid = begin + (end - begin) / 2;
-    MergeSortImp(begin, mid);
-    MergeSortImp(mid, end);
+    MergeSortImp<InsertionSortThreshold, Iterator>(begin, mid);
+    MergeSortImp<InsertionSortThreshold, Iterator>(mid, end);
     Merge(begin, mid, end);
 }
 
@@ -49,3 +52,5 @@ template<typename Iterator>
 void MergeSort(Iterator begin, Iterator end) {
     MergeSortImp<1, Iterator>(begin, end);
 }
+
+#endif

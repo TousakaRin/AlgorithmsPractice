@@ -1,4 +1,7 @@
-#include "common.h"
+#ifndef INSERTIONT_SORT_HPP
+#define INSERTIONT_SORT_HPP
+
+#include "common/common.h"
 
 template<typename Iterator>
 void InsertionSort(Iterator begin, Iterator end) {
@@ -13,15 +16,4 @@ void InsertionSort(Iterator begin, Iterator end) {
     }
 }
 
-TEST(TestInsertionSort, EmptyTest) {
-   vector<int> array;
-   InsertionSort(array.begin(), array.end());
-}
-
-TEST(TestInsertionSort, CorrectTest) {
-   vector<int> array{3, 5, 6, 2, 3, 1, 5};
-   InsertionSort(array.begin(), array.end());
-   for (auto it = array.begin(); it < array.end() - 1; ++it) {
-       ASSERT_LE(*it, *(it + 1));
-   }
-}
+#endif

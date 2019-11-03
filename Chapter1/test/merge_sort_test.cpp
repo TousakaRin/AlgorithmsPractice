@@ -1,5 +1,4 @@
-#include "common.h"
-#include "merge_sort.hpp"
+#include "Chapter1/merge_sort.hpp"
 
 constexpr int kIsertionSortThreshold = 3;
 
