@@ -31,18 +31,18 @@ int CountReversePairs(Iterator begin, Iterator end) {
             if (less_than(l_iter, r_iter)) {
                 *begin++ = *l_iter++;
             } else {
-                ++reverse_pair_count;
+                reverse_pair_count += l.end() - l_iter;
                 *begin++ = *r_iter++;
             }
         }
-        cout << reverse_pair_count << " 11" << endl;
+        cout << reverse_pair_count << endl;
         return reverse_pair_count;
     };
     if (end - begin < 2) {
         return 0;
     }
     Iterator mid = begin + (end - begin) / 2;
-    return CountReversePairs(begin, mid) + 
+    return CountReversePairs(begin, mid) +
            CountReversePairs(mid, end) +
            merge_and_count(begin, mid, end);
 }
