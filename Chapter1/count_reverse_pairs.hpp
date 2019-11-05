@@ -35,7 +35,6 @@ int CountReversePairs(Iterator begin, Iterator end) {
                 *begin++ = *r_iter++;
             }
         }
-        cout << reverse_pair_count << endl;
         return reverse_pair_count;
     };
     if (end - begin < 2) {
