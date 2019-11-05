@@ -1,5 +1,5 @@
-#ifndef INSERTIONT_SORT_HPP
-#define INSERTIONT_SORT_HPP
+#ifndef CHAPTER1_INSERTIONT_SORT_HPP
+#define CHAPTER1_INSERTIONT_SORT_HPP
 
 #include "common/common.h"
 
