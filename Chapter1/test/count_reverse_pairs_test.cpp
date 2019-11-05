@@ -6,7 +6,7 @@ TEST(ReversePairsTest, EmptyTest) {
               0);
 }
 
-TEST(ReversePairsTest, CorrectTest) {
+TEST(ReversePairsTest, CorrectnessTest) {
     {
         vector<int> array{2, 3, 8, 6, 1};
         ASSERT_EQ(CountReversePairs(array.begin(), array.end()),

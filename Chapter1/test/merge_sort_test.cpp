@@ -8,7 +8,7 @@ TEST(TestMergeSort, EmptyTest) {
    MergeSortImp<kIsertionSortThreshold>(array.begin(), array.end());
 }
 
-TEST(TestMergeSort, CorrectTest) {
+TEST(TestMergeSort, CorrectnessTest) {
    vector<int> array{3, 5, 6, 2, 3, 1, 5};
    MergeSort(array.begin(), array.end());
    for (auto it = array.begin(); it < array.end() - 1; ++it) {
@@ -16,7 +16,7 @@ TEST(TestMergeSort, CorrectTest) {
    }
 }
 
-TEST(TestMergeSortImp, CorrectTest) {
+TEST(TestMergeSortImp, CorrectnessTest) {
    vector<int> array{3, 5, 6, 2, 3, 1, 5};
    MergeSortImp<kIsertionSortThreshold>(array.begin(), array.end());
    for (auto it = array.begin(); it < array.end() - 1; ++it) {

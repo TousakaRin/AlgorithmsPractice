@@ -25,3 +25,10 @@ cc_test(
     deps = [
     ]
 )
+
+cc_test(
+    name = 'find_max_subarray_test',
+    srcs = 'find_max_subarray_test.cpp',
+    deps = [
+    ]
+)

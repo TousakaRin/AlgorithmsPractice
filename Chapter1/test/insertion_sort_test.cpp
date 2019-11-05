@@ -5,7 +5,7 @@ TEST(TestInsertionSort, EmptyTest) {
    InsertionSort(array.begin(), array.end());
 }
 
-TEST(TestInsertionSort, CorrectTest) {
+TEST(TestInsertionSort, CorrectnessTest) {
    vector<int> array{3, 5, 6, 2, 3, 1, 5};
    InsertionSort(array.begin(), array.end());
    for (auto it = array.begin(); it < array.end() - 1; ++it) {
